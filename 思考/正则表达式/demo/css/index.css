@@ -1,0 +1,84 @@
+﻿/********************************************/
+/*program:*/
+/*time:2015.12.2*/
+/*author:lijiancong*/
+/*email:1430004183@qq.com*/
+/*copyright:globalexibit*/
+/********************************************/
+/* css  reset */
+html, body ,form{
+	font-size: 14px;
+	font-size: 14px\9;
+		height: 100%;
+	margin: 0;
+}
+body {
+	font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+	overflow-y: scroll;
+}
+@media (max-width: 991px) {
+html, body {
+	font-size: 13px;
+	font-size: 13px\9;
+}
+}
+@media (max-width: 767px) {
+html, body {
+	font-size: 12px;
+	font-size: 12px\9;
+}
+}
+h1 {
+	font-size: 3em;
+	margin: 0;
+	font-weight: bold;
+}
+h3 {
+	font-size: 2em;
+	margin: 0;
+	font-weight: bold;
+}
+h4 {
+	font-size: 1.3em;
+	margin: 0;
+	font-weight: bold;
+}
+small {
+	margin-left: 5px;
+}
+a, a:hover, a:focus {
+	text-decoration: none;
+	outline: none;
+	color: #34393b;
+}
+a:active {star:expression(this.onFocus=this.blur());} 
+ul{padding: 0px;}
+li{list-style: none;}
+
+/* WP8 and IE10 hack */
+@-webkit-viewport {
+width: device-width;
+}
+@-moz-viewport {
+width: device-width;
+}
+@-ms-viewport {
+width: device-width;
+}
+@-o-viewport {
+width: device-width;
+}
+@viewport {
+width: device-width;
+}
+.ie {
+	height: 100%;
+	width: 100%;
+	background: url(../images/404.jpg) no-repeat center center #F3F2EE;
+	position: fixed;
+	z-index: 999999;
+}
+
+.error{
+	color: red;
+}

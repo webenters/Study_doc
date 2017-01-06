@@ -1,0 +1,33 @@
+查找字符（单词边界，修饰符）
+
+
+this is an apple 
+
+he is a boy
+
+it Is a good day 
+
+isn't it ?
+
+is he?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var reg = /\bis\b/g
+
+var reg = new RegExp('\\bis\\b','g');

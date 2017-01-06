@@ -1,0 +1,95 @@
+1)安装git.exe
+2)创建git全局，参照图片git.png
+3)cd 到指定目录
+
+
+*****************提交代码***********************
+git add * (或指定文件 git add index.html)
+git commit -m "注释"
+git push -u origin master //提交代码，到直gitg接分支 master为主干
+
+
+411报错时
+git config http.postBuffer 524288000 
+
+
+删除文件
+git rm 文件名
+git commit -m 'rm'
+git push
+
+删除本地，拉服务器文件
+git checkout -f 文件
+
+
+切换分支
+git checkout dev
+
+
+
+版本回退
+git reset --hard 2bf09532
+
+
+
+新建分支
+
+创建本地分支dev git checkout -b dev
+
+git branch premaster
+git checkout premaster
+git pull origin master
+git add *
+git commit -m 'premaster'
+git push --set-upstream origin premaster
+
+
+同步分支如premaster的代码提交到master，先到master分支，再merge premaster即可
+git checkout master
+git merge premaster
+
+
+********************git 命令*********************************
+
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [	--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG 
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.

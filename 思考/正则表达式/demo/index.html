@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="content-type" content="text/html" />
+        <!-- 指定以最新的IE版本模式来显示网页 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- 针对360浏览器的内核调用,强制调用极速模式 -->
+        <meta name="renderer" content="webkit" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>index</title>
+        <!-- 更换第三方图标库,Font Awesome <i class="fa fa-medium">-->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/index.css" rel="stylesheet">
+    </head>
+    <body>
+        <h3 class="text-center">Regist</h3>
+        <div class="panel">
+            <form class="form-horizontal" role="form">
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-9">
+                  <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                </div>
+                <!-- <div class="col-sm-1 error">error</div> -->
+              </div>
+              <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                <div class="col-sm-9">
+                  <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                </div>
+              </div>
+        </div>
+
+
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            $('#inputEmail').on('blur',function () {
+
+                var val = $(this).val();
+
+                var reg = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/g;
+
+                if(!reg.test(val)){
+                    console.log(1111);
+                }
+
+
+            })
+
+            
+
+            
+        </script>
+    </body>
+</html>
