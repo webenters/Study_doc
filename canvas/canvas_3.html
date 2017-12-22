@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>canvas</title>
+  <style>
+    body {
+      background: #000;
+    }
+    #mycanvas {
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="mycanvas" width="800px" height="450ox">
+    <span>您的浏览器版本不支持canvas，请使用高级浏览器。</span>
+  </canvas>
+
+
+  <script>
+    window.onload = function () {
+
+      function draw () {
+        const mycanvas = document.querySelector('#mycanvas');
+
+        const ctx = mycanvas.getContext('2d');
+
+        // ctx.beginPath();
+
+        // ctx.moveTo(60,60);
+
+        // ctx.lineTo(60,120);
+        // ctx.lineTo(120,120);
+
+        // ctx.stroke();
+        // ctx.closePath();
+
+
+        ctx.beginPath();
+
+        ctx.strokeStyle = '#999'
+        ctx.lineWidth = 1;
+
+        ctx.moveTo(150.5,150.5);
+
+        ctx.lineTo(150.5,300.5);
+        ctx.lineTo(400.5,300.5);
+
+        ctx.stroke();
+        ctx.closePath();
+
+
+        // ctx.strokeStyle = '#f00'
+
+        // ctx.beginPath();
+        // ctx.moveTo(180,280);
+
+        // ctx.lineTo(200,160);
+        // ctx.lineTo(220,200);
+        // ctx.lineTo(240,220);
+        // ctx.lineTo(260,180);
+
+        // ctx.stroke()
+        // ctx.closePath();
+
+
+        // ctx.lineWidth = 4;
+        // ctx.beginPath();
+
+        // ctx.setLineDash([25,15,5]);
+
+        // ctx.strokeStyle = '#f36';
+        // ctx.moveTo(150,350);
+        // ctx.lineTo(500,350);
+
+
+        // ctx.stroke();
+        // ctx.closePath();
+
+        // ctx.lineWidth = 4;
+        // ctx.beginPath();
+
+        // ctx.setLineDash([5,5]);
+
+        // ctx.strokeStyle = '#f00';
+        // ctx.moveTo(150,370);
+        // ctx.lineTo(500,370);
+
+        // ctx.stroke();
+        // ctx.closePath();
+
+      }
+      
+      draw();
+
+    }
+  </script>
+</body>
+</html>

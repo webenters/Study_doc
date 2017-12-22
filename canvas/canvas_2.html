@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>canvas</title>
+  <style>
+    body {
+      background: #000;
+    }
+    #mycanvas {
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="mycanvas" width="800px" height="450ox">
+    <span>您的浏览器版本不支持canvas，请使用高级浏览器。</span>
+  </canvas>
+
+
+  <script>
+    window.onload = function () {
+
+      function draw () {
+        const mycanvas = document.querySelector('#mycanvas');
+
+        const ctx = mycanvas.getContext('2d');
+
+
+        ctx.fillRect(25,25,100,100);
+        
+        ctx.clearRect(45,45,60,60);
+        
+        ctx.strokeRect(50,50,50,50);
+
+      }
+      
+      draw();
+
+    }
+  </script>
+</body>
+</html>

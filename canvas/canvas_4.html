@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>canvas</title>
+  <style>
+    body {
+      background: #000;
+    }
+    #mycanvas {
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="mycanvas" width="800px" height="450ox">
+    <span>您的浏览器版本不支持canvas，请使用高级浏览器。</span>
+  </canvas>
+
+
+  <script>
+    window.onload = function () {
+
+      function draw () {
+        const mycanvas = document.querySelector('#mycanvas');
+
+        const ctx = mycanvas.getContext('2d');
+
+        ctx.beginPath();
+
+        ctx.arc(200,200,50,0,360*(Math.PI/180),true);
+
+        ctx.moveTo(180,190);
+        ctx.arc(180,190,5,0,360*(Math.PI/180),true);
+
+        ctx.moveTo(220,190);
+        ctx.arc(220,190,5,0,360*(Math.PI/180),true);
+
+        ctx.moveTo(180,220);
+        ctx.arc(200,220,20,0,180*(Math.PI/180),false);
+
+
+
+        ctx.closePath();
+        ctx.stroke();
+
+      }
+      
+      draw();
+
+    }
+  </script>
+</body>
+</html>
